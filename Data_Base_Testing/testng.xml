@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="DataBase Testing !">
+    <listeners>
+        <!-- Register the method-level listener -->
+        <listener class-name="Listeners.CustomListener"/>
+    </listeners>
+    <!-- Define a test -->
+    <test name="DataBase Testing !">
+        <!-- Specify the classes to run in this test -->
+        <classes>
+               <class name="testCases.InvoiceDoaIntegrationTest">
+                   <methods>
+                            <include name="save"/>
+                   </methods>
+               </class>
+        </classes>
+    </test>
+
+</suite>
