@@ -1,0 +1,21 @@
+name: run unit test on feature branches
+
+on:
+  push:
+    branches:
+    'feature/*'
+
+jobs: 
+  run-unit-test
+     runs on: windows-latest
+
+     steps:
+       - name: Checkout
+         uses: actions/checkout@v4.2.1
+
+       - name: run unit test
+         run: mvn test
+
+         
+
+       
